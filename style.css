@@ -52,6 +52,11 @@ li a:hover::after {
     width: 100%;
 }
 
+/* Default styles for larger screens */
+nav {
+    font-size: 16px;
+  }
+
 /* Sets main to start at bottom of header instead of inside */
 main {
     display:flex;
@@ -181,17 +186,7 @@ footer a {
     min-width: 12.5rem /*200px*/;
 }
 
-/* Media Query */
-@media only screen and (min-width: 29.8125rem /*477px*/) {
-    .ft-main {
-        justify-content: space-around;
-    }
-}
-@media only screen and (min-width: 77.5rem /*1240px*/ ) {
-    .ft-main {
-        justify-content: space-evenly;
-    }
-}
+
 
 /* Newsletter CSS */
 form {
