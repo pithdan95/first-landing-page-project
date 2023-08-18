@@ -38,7 +38,7 @@ ul li a {
 }
 
 /* Adds line element under nav items as a new block level starting at 0% width*/
-li a::after {
+.main-nav::after {
     content: '';
     display: block;
     height: 4px;
@@ -50,6 +50,61 @@ li a::after {
 /* Adds transition for after element to take 100% width on hover */
 li a:hover::after {
     width: 100%;
+}
+
+/* dropdown */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Ensure dropdown appears above other content */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    color: black;
+    background-color: #c4c4f7;
+}
+
+.sub-dropdown {
+    display: inline-block;
+    width: 100%;
+}
+
+/* Adjusted sub-dropdown styles */
+.sub-dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Ensure sub-dropdown appears above other content */
+    left: 100%; /* Position sub-dropdown to the right of parent */
+    top: 50%; /*Positions sub-dropdown to the same height as parent */
+    width: 100%;
+}
+
+
+/* Display sub-dropdown content on hover */
+.sub-dropdown:hover .sub-dropdown-content {
+    display: block;
 }
 
 /* Default styles for larger screens */
